@@ -1,0 +1,14 @@
+#include "asm.h"
+#include "memlayout.h"
+#include "mmu.h"
+
+.code16
+.global start
+start:
+	cli  #阻止中断程序
+
+	#
+	xorw	%ax,%ax
+	movw	%ax,%ax
+	movw	%ax,%es
+	movw	%ax,%ss
